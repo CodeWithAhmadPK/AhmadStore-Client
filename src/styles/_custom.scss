@@ -1,0 +1,98 @@
+// ==========================================
+// AHMAD STORE - Custom Overrides & Helpers
+// ==========================================
+
+@use './variables' as *;
+@use './mixins' as *;
+
+// Global Resets
+body {
+  background-color: $body-bg;
+  color: $text-primary;
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Custom Buttons
+.btn-primary-store {
+  background-color: $primary;
+  color: $white;
+  border: 1px solid $primary;
+  border-radius: $radius-sm;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: $transition-fast;
+
+  &:hover, &:focus {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+    color: $white;
+  }
+}
+
+.btn-accent-store {
+  background-color: $accent;
+  color: $white;
+  border: 1px solid $accent;
+  border-radius: $radius-sm;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: $transition-fast;
+
+  &:hover, &:focus {
+    background-color: $accent-hover;
+    border-color: $accent-hover;
+    color: $white;
+  }
+}
+
+// Badge Helpers
+.badge-stock {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: $radius-full;
+  font-weight: 600;
+
+  &.in-stock {
+    background-color: rgba($success, 0.12);
+    color: #059669;
+  }
+
+  &.out-of-stock {
+    background-color: rgba($danger, 0.12);
+    color: $danger;
+  }
+}
+
+.badge-sale {
+  background-color: $danger;
+  color: $white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: $radius-sm;
+}
+
+// Layout helper
+.page-container {
+  min-height: calc(100vh - #{$header-height} - 300px);
+}

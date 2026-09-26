@@ -1,0 +1,146 @@
+// ==========================================
+// AHMAD STORE - FullScreen Loader & Brand Logo Styles
+// ==========================================
+
+@use './variables' as *;
+@use './mixins' as *;
+
+// Brand Logo Component
+.brand-logo-container {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
+
+  .brand-logo-img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    display: block;
+  }
+
+  // Variant for dark backgrounds (Footer, Admin Sidebar)
+  &.variant-on-dark {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: $radius-sm;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Text Fallback (Shown if logo image fails to load)
+  .brand-logo-text-fallback {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: $primary;
+    display: inline-block;
+    user-select: none;
+
+    span {
+      color: $accent;
+    }
+
+    &.text-on-dark {
+      color: $white;
+
+      span {
+        color: #38bdf8;
+      }
+    }
+  }
+}
+
+// Fullscreen Loader Overlay
+.fullscreen-loader-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  .fullscreen-loader-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    max-width: 90vw;
+    width: 360px;
+    animation: loaderCardFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .fullscreen-loader-logo-wrap {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loaderLogoPulse 2.5s ease-in-out infinite;
+
+    img {
+      filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.08));
+    }
+  }
+
+  .fullscreen-loader-spinner {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 1.25rem;
+
+    .spinner-ring {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid rgba(37, 99, 235, 0.15);
+      border-top-color: #2563eb;
+      animation: loaderSpin 0.75s linear infinite;
+    }
+  }
+
+  .fullscreen-loader-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    letter-spacing: 0.2px;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .fullscreen-loader-subtext {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0;
+  }
+}
+
+// Keyframe Animations
+@keyframes loaderCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes loaderLogoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes loaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,56 @@
+// ==========================================
+// AHMAD STORE - SCSS Mixins
+// ==========================================
+
+@use './variables' as *;
+
+// Center with flex
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex space between
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Text truncation (single line)
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Multi-line text clamping
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Subtle card styling
+@mixin store-card {
+  background-color: $card-bg;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    border-color: #cbd5e1;
+  }
+}
+
+// Glassmorphism effect
+@mixin glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}

@@ -1,0 +1,62 @@
+// ==========================================
+// AHMAD STORE - Design System Variables
+// Suitable for General E-Commerce
+// (Fashion, Electronics, Home, Beauty, etc.)
+// ==========================================
+
+// Color Palette
+$primary: #0f172a;           // Deep slate navy / brand authority
+$primary-light: #1e293b;
+$primary-hover: #334155;
+
+$accent: #2563eb;            // Vibrant royal blue for CTAs
+$accent-hover: #1d4ed8;
+
+$secondary: #64748b;         // Slate secondary
+$success: #10b981;           // In stock / checkout success
+$warning: #f59e0b;           // Low stock / ratings / badges
+$danger: #ef4444;            // Out of stock / errors / discounts
+$info: #0284c7;
+
+// Neutral Shades
+$dark: #0f172a;
+$light: #f8fafc;
+$white: #ffffff;
+$body-bg: #f8fafc;
+$card-bg: #ffffff;
+$border-color: #e2e8f0;
+$border-light: #f1f5f9;
+
+// Text Colors
+$text-primary: #0f172a;
+$text-secondary: #64748b;
+$text-muted: #94a3b8;
+$text-light: #ffffff;
+
+// Typography
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 0.95rem;
+$line-height-base: 1.5;
+
+// Shadows & Elevation
+$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+$shadow-card: 0 2px 8px rgba(15, 23, 42, 0.06);
+
+// Border Radius
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 14px;
+$radius-full: 9999px;
+
+// Layout & Spacing
+$header-height: 72px;
+$admin-sidebar-width: 250px;
+$admin-header-height: 64px;
+$container-max-width: 1280px;
+
+// Transitions
+$transition-fast: all 0.15s ease-in-out;
+$transition-base: all 0.25s ease-in-out;
