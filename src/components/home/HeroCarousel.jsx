@@ -47,9 +47,6 @@ const HeroCarousel = () => {
               className="hero-slide-item d-flex align-items-center"
               style={{
                 background: `linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.65)), url(${banner.image || defaultBanners[index % defaultBanners.length].image}) center/cover no-repeat`,
-                minHeight: '440px',
-                padding: '3.5rem 1.5rem',
-                borderRadius: '16px',
                 color: '#ffffff',
               }}
             >
@@ -65,7 +62,7 @@ const HeroCarousel = () => {
                 <p className="lead text-light opacity-90 mb-4" style={{ fontSize: '1.1rem' }}>
                   {banner.subtitle}
                 </p>
-                <div className="d-flex gap-3 justify-content-center justify-content-md-start">
+                <div className="hero-actions d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
                   <Link to={banner.linkUrl || '/shop'}>
                     <Button
                       type="primary"

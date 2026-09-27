@@ -178,9 +178,10 @@ const Navbar = () => {
           </div>
         }
         placement="left"
+        width="min(378px, 100vw)"
         onClose={() => setMobileMenuOpen(false)}
         open={mobileMenuOpen}
-        bodyStyle={{ padding: 0 }}
+        styles={{ body: { padding: 0 } }}
       >
         <div className="p-3 bg-light border-bottom">
           <Link

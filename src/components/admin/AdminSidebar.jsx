@@ -11,17 +11,25 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 
-const AdminSidebar = () => {
+const AdminSidebar = ({ isOpen = false, onClose }) => {
   return (
-    <aside className="admin-sidebar">
+    <aside className={`admin-sidebar${isOpen ? ' is-open' : ''}`} aria-label="Admin navigation">
       <div className="sidebar-brand d-flex align-items-center justify-content-between">
         <Link to="/admin" className="text-decoration-none">
           <BrandLogo height={30} variant="on-dark" />
         </Link>
         <span className="badge bg-secondary-subtle text-light small fw-normal ms-2">Admin</span>
+        <button
+          type="button"
+          className="sidebar-mobile-close"
+          onClick={onClose}
+          aria-label="Close admin navigation"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
 
-      <nav className="sidebar-nav">
+      <nav className="sidebar-nav" onClick={onClose}>
         <div className="nav-group-title">Overview</div>
         <NavLink
           to="/admin"

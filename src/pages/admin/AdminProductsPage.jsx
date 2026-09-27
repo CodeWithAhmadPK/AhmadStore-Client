@@ -266,6 +266,7 @@ const AdminProductsPage = () => {
           dataSource={products}
           columns={columns}
           rowKey="_id"
+          scroll={{ x: 'max-content' }}
           loading={loading}
           pagination={{
             current: pagination.page,

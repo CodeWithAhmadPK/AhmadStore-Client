@@ -99,7 +99,7 @@ const CheckoutPage = () => {
           ]}
         />
 
-        <div className="d-flex align-items-center justify-content-between mb-4">
+        <div className="checkout-page-heading d-flex align-items-center justify-content-between mb-4">
           <div>
             <h2 className="fw-bold mb-1">Guest Checkout</h2>
             <p className="text-secondary small mb-0">
@@ -269,7 +269,7 @@ const CheckoutPage = () => {
                 {cartItems.map((item, idx) => (
                   <div
                     key={idx}
-                    className="d-flex align-items-center justify-content-between py-2 border-bottom"
+                    className="checkout-order-item d-flex align-items-center justify-content-between py-2 border-bottom"
                   >
                     <div className="d-flex align-items-center gap-2">
                       <img
@@ -281,7 +281,7 @@ const CheckoutPage = () => {
                         className="rounded-2 border"
                         style={{ width: '48px', height: '48px', objectFit: 'cover' }}
                       />
-                      <div>
+                      <div className="checkout-order-item-details">
                         <span className="fw-semibold small d-block text-truncate" style={{ maxWidth: '180px' }}>
                           {item.name}
                         </span>
@@ -299,7 +299,7 @@ const CheckoutPage = () => {
                         )}
                       </div>
                     </div>
-                    <span className="fw-bold small text-dark">
+                    <span className="checkout-order-item-total fw-bold small text-dark">
                       {formatCurrency((item.price || 0) * (item.quantity || 1))}
                     </span>
                   </div>

@@ -426,9 +426,9 @@ const ShopPage = () => {
       <Drawer
         title="Filter Products"
         placement="right"
+        width="min(360px, 100vw)"
         onClose={() => setFilterDrawerOpen(false)}
         open={filterDrawerOpen}
-        width={320}
       >
         {FilterContent}
       </Drawer>

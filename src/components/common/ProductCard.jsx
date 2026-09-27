@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
           </h4>
         </Link>
 
-        <div className="d-flex align-items-center justify-content-between mb-3">
+        <div className="product-price-stock-row d-flex align-items-center justify-content-between mb-3">
           <div className="product-price-row">
             <span className="current-price">
               {formatCurrency(hasDiscount ? product.salePrice : product.price)}

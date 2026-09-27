@@ -31,7 +31,7 @@ const Footer = () => {
               {settings.contact?.email && (
                 <div className="mb-1">
                   <MailOutlined className="me-2 text-primary-light" />
-                  {settings.contact.email}
+                  <span className="footer-contact-email">{settings.contact.email}</span>
                 </div>
               )}
               {settings.contact?.address && (

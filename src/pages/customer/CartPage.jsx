@@ -45,7 +45,7 @@ const CartPage = () => {
       <div className="container">
         <Breadcrumbs items={[{ label: 'Cart' }]} />
 
-        <div className="d-flex justify-content-between align-items-center mb-4">
+        <div className="cart-page-heading d-flex justify-content-between align-items-center mb-4">
           <h2 className="fw-bold mb-0">Shopping Cart ({itemCount} items)</h2>
           <Popconfirm
             title="Clear all items?"
@@ -66,8 +66,8 @@ const CartPage = () => {
         <div className="row g-4">
           {/* Left: Cart Items List */}
           <div className="col-12 col-lg-8">
-            <div className="card border-0 shadow-sm rounded-4 p-3 bg-white">
-              <div className="table-responsive">
+            <div className="cart-items-card card border-0 shadow-sm rounded-4 p-3 bg-white">
+              <div className="cart-items-table table-responsive">
                 <table className="table align-middle mb-0">
                   <thead className="table-light">
                     <tr>
@@ -92,7 +92,7 @@ const CartPage = () => {
                       return (
                         <tr key={item.key || `${item.product}_${item.name}`}>
                           {/* Image & Title */}
-                          <td>
+                          <td data-label="Product">
                             <div className="d-flex align-items-center gap-3">
                               <Link to={`/product/${item.slug || item.product}`}>
                                 <img
@@ -112,7 +112,7 @@ const CartPage = () => {
                               <div>
                                 <Link
                                   to={`/product/${item.slug || item.product}`}
-                                  className="text-dark fw-semibold text-decoration-none d-block"
+                                  className="cart-item-name text-dark fw-semibold text-decoration-none d-block"
                                 >
                                   {item.name}
                                 </Link>
@@ -132,10 +132,10 @@ const CartPage = () => {
                           </td>
 
                           {/* Unit Price */}
-                          <td className="text-center fw-medium">{formatCurrency(item.price)}</td>
+                          <td data-label="Price" className="text-center fw-medium">{formatCurrency(item.price)}</td>
 
                           {/* Quantity Controls */}
-                          <td className="text-center">
+                          <td data-label="Quantity" className="text-center">
                             <div className="btn-group btn-group-sm border rounded-2" role="group">
                               <button
                                 type="button"
@@ -163,12 +163,12 @@ const CartPage = () => {
                           </td>
 
                           {/* Item Subtotal */}
-                          <td className="text-end fw-bold text-primary">
+                          <td data-label="Total" className="text-end fw-bold text-primary">
                             {formatCurrency(itemTotal)}
                           </td>
 
                           {/* Remove Button */}
-                          <td className="text-end">
+                          <td data-label="Remove" className="text-end">
                             <button
                               type="button"
                               className="btn btn-link text-danger p-0 border-0"

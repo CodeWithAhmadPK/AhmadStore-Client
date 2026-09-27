@@ -92,7 +92,7 @@ const OrderConfirmationPage = () => {
             style={{ maxWidth: '400px' }}
           >
             <span className="text-muted small text-uppercase fw-semibold">Order Reference Number:</span>
-            <h3 className="fw-bold text-primary mb-0 mt-1 letter-spacing-1">
+            <h3 className="order-reference fw-bold text-primary mb-0 mt-1 letter-spacing-1">
               {order.orderReference}
             </h3>
           </div>

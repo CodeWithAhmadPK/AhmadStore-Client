@@ -300,7 +300,7 @@ const AdminProductFormPage = () => {
             </div>
           </div>
 
-          <div className="d-flex gap-5 mt-2">
+          <div className="d-flex flex-wrap gap-3 gap-md-5 mt-2">
             <Form.Item label="Active in Store" name="isActive" valuePropName="checked">
               <Switch checkedChildren="Active" unCheckedChildren="Hidden" />
             </Form.Item>
@@ -393,7 +393,7 @@ const AdminProductFormPage = () => {
             {(fields, { add, remove }) => (
               <>
                 {fields.map(({ key, name, ...restField }) => (
-                  <Space key={key} style={{ display: 'flex', marginBottom: 8 }} align="baseline">
+                  <Space key={key} className="responsive-form-row" style={{ display: 'flex', marginBottom: 8 }} align="baseline">
                     <Form.Item
                       {...restField}
                       name={[name, 'key']}
@@ -406,7 +406,7 @@ const AdminProductFormPage = () => {
                       name={[name, 'value']}
                       rules={[{ required: true, message: 'Value required' }]}
                     >
-                      <Input placeholder="e.g. 40 Hours, 100% Cotton" style={{ minWidth: '280px' }} />
+                      <Input placeholder="e.g. 40 Hours, 100% Cotton" />
                     </Form.Item>
                     <MinusCircleOutlined className="text-danger" onClick={() => remove(name)} />
                   </Space>

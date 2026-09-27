@@ -6,7 +6,7 @@ import { ShoppingOutlined, HomeOutlined } from '@ant-design/icons';
 const NotFoundPage = () => {
   return (
     <div className="container py-5 text-center">
-      <div className="card border-0 shadow-sm rounded-4 p-5 bg-white mx-auto" style={{ maxWidth: '600px' }}>
+      <div className="not-found-card card border-0 shadow-sm rounded-4 p-5 bg-white mx-auto" style={{ maxWidth: '600px' }}>
         <Result
           status="404"
           title="404 - Page Not Found"

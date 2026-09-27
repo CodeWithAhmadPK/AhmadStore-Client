@@ -164,7 +164,6 @@ const ProductDetailPage = () => {
                 {/* Main Active Image */}
                 <div
                   className="main-image-frame rounded-4 overflow-hidden mb-3 position-relative bg-light d-flex align-items-center justify-content-center"
-                  style={{ minHeight: '400px', maxHeight: '500px' }}
                 >
                   {hasDiscount && (
                     <span
@@ -223,7 +222,7 @@ const ProductDetailPage = () => {
               <h1 className="h2 fw-bold text-dark mt-1 mb-2">{product.name}</h1>
 
               {/* Category & SKU row */}
-              <div className="d-flex align-items-center gap-3 mb-3 text-secondary small">
+              <div className="product-info-meta d-flex align-items-center gap-3 mb-3 text-secondary small">
                 {product.category && (
                   <span>
                     Category:{' '}
@@ -239,7 +238,7 @@ const ProductDetailPage = () => {
               </div>
 
               {/* Price & Stock Badge */}
-              <div className="d-flex align-items-center gap-3 my-3">
+              <div className="product-price-stock-row d-flex align-items-center gap-3 my-3">
                 <span className="h2 fw-bold text-primary mb-0">
                   {formatCurrency(hasDiscount ? product.salePrice : product.price)}
                 </span>
@@ -354,7 +353,7 @@ const ProductDetailPage = () => {
 
               {/* Trust Badges in Detail Page */}
               <div className="bg-light p-3 rounded-3 mt-4">
-                <div className="row g-2 text-secondary small">
+                <div className="trust-badges-row row g-2 text-secondary small">
                   <div className="col-6 d-flex align-items-center gap-2">
                     <CarOutlined className="text-primary" />
                     <span>Cash on Delivery Nationwide</span>

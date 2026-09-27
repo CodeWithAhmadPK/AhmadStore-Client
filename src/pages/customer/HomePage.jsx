@@ -27,7 +27,7 @@ const HomePage = () => {
         <FeaturedProducts />
 
         {/* Bottom Banner Call to Action */}
-        <div className="my-5 p-5 text-center rounded-4 text-white position-relative overflow-hidden"
+        <div className="home-confidence-cta my-5 p-5 text-center rounded-4 text-white position-relative overflow-hidden"
              style={{
                background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)',
                boxShadow: '0 8px 24px rgba(15, 23, 42, 0.15)',

@@ -171,7 +171,7 @@ const AdminOrdersPage = () => {
 
   return (
     <div className="admin-orders-wrapper">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-4">
         <div>
           <h3 className="fw-bold mb-1">Orders Management</h3>
           <p className="text-secondary small mb-0">
@@ -224,6 +224,7 @@ const AdminOrdersPage = () => {
           dataSource={orders}
           columns={columns}
           rowKey="_id"
+          scroll={{ x: 'max-content' }}
           loading={loading}
           pagination={{
             current: pagination.page,

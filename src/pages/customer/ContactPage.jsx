@@ -68,7 +68,7 @@ const ContactPage = () => {
                 <div className="p-2 bg-light rounded-3 text-primary">
                   <MailOutlined style={{ fontSize: '1.2rem' }} />
                 </div>
-                <div>
+                <div className="contact-email-details">
                   <span className="text-muted small d-block">Email Inquiries</span>
                   <span className="fw-bold text-dark">{settings.contact?.email || 'support@ahmadstore.com'}</span>
                 </div>

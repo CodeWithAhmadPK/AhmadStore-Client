@@ -179,7 +179,7 @@ const AdminCategoriesPage = () => {
 
   return (
     <div className="admin-categories-wrapper">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4">
         <div>
           <h3 className="fw-bold mb-1">Categories Management</h3>
           <p className="text-secondary small mb-0">
@@ -201,6 +201,7 @@ const AdminCategoriesPage = () => {
           dataSource={categories}
           columns={columns}
           rowKey="_id"
+          scroll={{ x: 'max-content' }}
           loading={loading}
           pagination={{ pageSize: 15 }}
           size="middle"
@@ -257,7 +258,7 @@ const AdminCategoriesPage = () => {
             {(fields, { add, remove }) => (
               <>
                 {fields.map(({ key, name, ...restField }) => (
-                  <Space key={key} style={{ display: 'flex', marginBottom: 8 }} align="baseline">
+                  <Space key={key} className="responsive-form-row" style={{ display: 'flex', marginBottom: 8 }} align="baseline">
                     <Form.Item
                       {...restField}
                       name={[name, 'name']}

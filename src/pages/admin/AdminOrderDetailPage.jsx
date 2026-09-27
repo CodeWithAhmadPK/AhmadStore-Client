@@ -103,7 +103,7 @@ const AdminOrderDetailPage = () => {
 
   return (
     <div className="admin-order-detail-wrapper" style={{ maxWidth: '980px' }}>
-      <div className="d-flex align-items-center justify-content-between mb-4">
+      <div className="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 mb-4">
         <div className="d-flex align-items-center gap-3">
           <Link to="/admin/orders">
             <Button icon={<ArrowLeftOutlined />} />

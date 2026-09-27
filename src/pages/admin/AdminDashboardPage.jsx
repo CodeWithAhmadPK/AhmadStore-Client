@@ -194,7 +194,7 @@ const AdminDashboardPage = () => {
 
   return (
     <div className="admin-dashboard-wrapper">
-      <div className="d-flex align-items-center justify-content-between mb-4">
+      <div className="dashboard-page-heading d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
         <div>
           <h3 className="fw-bold mb-1">Store Dashboard</h3>
           <p className="text-secondary small mb-0">
@@ -294,7 +294,7 @@ const AdminDashboardPage = () => {
                     nameKey="name"
                     cx="50%"
                     cy="50%"
-                    outerRadius={80}
+                    outerRadius="65%"
                     label
                   >
                     {statusDistribution.map((entry, index) => (
@@ -325,6 +325,7 @@ const AdminDashboardPage = () => {
           dataSource={recentOrders}
           columns={orderColumns}
           rowKey="_id"
+          scroll={{ x: 'max-content' }}
           pagination={false}
           size="middle"
         />
